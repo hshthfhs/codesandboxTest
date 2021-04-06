@@ -124,11 +124,58 @@ const arr7 = [...arr4, ...arr5];
 console.log(arr7);
 
 /**
- * map fillter を使った配列の処理
+ * map filter を使った配列の処理
+ */
+// const nameArr = ["田中", "山田", "花田"];
+
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+
+/**
+ * for文と一緒
  */
 const nameArr = ["田中", "山田", "花田"];
+nameArr.map((name) => console.log(name));
 
-const nameArr2 = nameArr.map((name) => {
-  return name;
+/**
+ * filterは条件式を書くことができる
+ */
+const numArr = [1, 2, 3, 4, 5];
+const newNumArr = numArr.filter((num) => {
+  return num % 2 === 1;
 });
-console.log(nameArr2);
+console.log(newNumArr);
+
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+/**
+ *
+ */
+const newNameArr = nameArr.map((name) => {
+  if (name === "花田") {
+    return name;
+  } else {
+    return `'${name}さん`;
+  }
+});
+console.log(newNameArr);
+
+/**
+ *　三項演算子
+ */
+//ある条件？条件がtrueのとき : 条件がfalseのとき
+const val6 = 1 > 0 ? "true" : "false";
+console.log(val6);
+
+//toLocaleStringは3桁区切りにしてくれる
+const num = 1200;
+console.log(num.toLocaleString());
+
+//numの文字列判定　"number"数値判定
+const formattedNum =
+  typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+console.log(formattedNum);
+
+const checkSum = (num1, num2);
