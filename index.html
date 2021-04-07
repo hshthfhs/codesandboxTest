@@ -6,8 +6,19 @@
   </head>
 
   <body>
-    <div id="app"></div>
-    <p>テスト</p>
+    <div class="input-area">
+      <input id="add-text" placeholder="TODOを入力" />
+      <button id="add-button">追加</button>
+    </div>
+    <div class="imcomplete-area">
+      <p class="title">未完了のTODOです</p>
+      <ul id="imcomplete-list"></ul>
+    </div>
+    <div class="complete-area">
+      <p class="title">完了したTODOです</p>
+      <ul id="complete-list"></ul>
+    </div>
+
     <script src="src/index.js"></script>
   </body>
 </html>
